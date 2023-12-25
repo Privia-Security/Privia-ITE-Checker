@@ -38,17 +38,17 @@ func ikinciasama(directory []string) {
 			target := baseURL + fmt.Sprintf(payload, dir, ext) 
 			req, err := http.NewRequest("OPTIONS", target, nil)
 			if err != nil {
-				fmt.Println("Request oluşturulurken hata:", err)
+				fmt.Println
 				continue
 			}
 
-			// Proxy ayarlarını kullanarak isteği gönder
+			// Send the request using the proxy settings
 			proxyURL, _ := url.Parse("http://127.0.0.1:8080")
 			transport := &http.Transport{Proxy: http.ProxyURL(proxyURL)}
 			client := &http.Client{Transport: transport}
 			resp, err := client.Do(req)
 			if err != nil {
-				fmt.Println("İstek gönderilirken hata:", err)
+				fmt.Println
 				continue
 			}
 			defer resp.Body.Close()
