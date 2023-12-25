@@ -24,7 +24,5 @@ Example:
 ```
 
 ### >_ Features
-```
 - find file and directory names
 - find file extension
-```
