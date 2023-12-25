@@ -1,10 +1,8 @@
 # Finduk
 
 ### >_ Introduction
-```
-It is a tool prepared for IIS Tilde 
-Enumeration vulnerability.
-```
+It is a tool prepared for IIS Tilde Enumeration vulnerability.
+
 ### >_ Preview
 ![finduk_preview](img/finduk_preview.png)
 
