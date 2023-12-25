@@ -1,29 +1,31 @@
-### Introduction
+# Finduk
+
+### >_ Introduction
 ```
 It is a tool prepared for IIS Tilde 
 Enumeration vulnerability.
 ```
-### Preview
+### >_ Preview
 ![finduk_preview](img/finduk_preview.png)
 
-### Installation
+### >_ Installation
 ```
 go install github.com/Privia-Security/finduk@latest
 ```
 
-### How To Run
+### >_ How To Run
 ```
 go run finduk.go http://192.168.112.136/ txt,png
 ```
 
-### Help
+### >_ Help
 ```
 Usage: Full URL <extensions>
 Example:
         go run finduk.go http://192.168.112.136/ txt,png
 ```
 
-### Features
+### >_ Features
 ```
 - find file and directory names
 - find file extension
