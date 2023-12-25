@@ -13,16 +13,20 @@ go install github.com/Privia-Security/finduk@latest
 
 ### >_ How To Run
 ```
-go run finduk.go http://192.168.112.136/ txt,png
+./finduk http://192.168.112.136/ txt,png
 ```
 
 ### >_ Help
 ```
 Usage: Full URL <extensions>
 Example:
-        go run finduk.go http://192.168.112.136/ txt,png
+        finduk http://192.168.112.136/ txt,png
 ```
 
 ### >_ Features
 - find file and directory names
 - find file extension
+
+### References
+1
+2
