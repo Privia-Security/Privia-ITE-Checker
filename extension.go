@@ -9,7 +9,6 @@ import (
 	"strings"
 )
 
-// Global değişkenler
 var (
 	baseURL     string
 	directories []string
@@ -38,17 +37,17 @@ func ikinciasama(directory []string) {
 			target := baseURL + fmt.Sprintf(payload, dir, ext) 
 			req, err := http.NewRequest("OPTIONS", target, nil)
 			if err != nil {
-				fmt.Println
+				fmt.Println("Error creating request:", err)
 				continue
 			}
 
-			// Send the request using the proxy settings
+			// Send the request using proxy settings
 			proxyURL, _ := url.Parse("http://127.0.0.1:8080")
 			transport := &http.Transport{Proxy: http.ProxyURL(proxyURL)}
 			client := &http.Client{Transport: transport}
 			resp, err := client.Do(req)
 			if err != nil {
-				fmt.Println
+				fmt.Println("Error creating request:", err)
 				continue
 			}
 			defer resp.Body.Close()
@@ -64,24 +63,24 @@ func ikinciasama(directory []string) {
 }
 
 func main() {
-	flag.StringVar(&baseURL, "url", "", "URL'yi belirtin") 
-	directoriesFlag := flag.String("dir", "", "Virgülle ayrilmis dizin listesi")
-	extensionsFlag := flag.String("ext", "txt,jpg,png,htm", "Virgülle ayrilmis dosya uzantilari listesi")
+	flag.StringVar(&baseURL, "url", "", "Specify the URL") 
+	directoriesFlag := flag.String("dir", "", "Comma separated directory list")
+	extensionsFlag := flag.String("ext", "txt,jpg,png,htm", "List of comma separated file extensions")
 	flag.Parse()
 
-	// Virgülle ayrılmış string'i diziye çevir
+	// Convert comma separated string to array
 	extensions = strings.Split(*extensionsFlag, ",")
 	if *directoriesFlag != "" {
 		directories = strings.Split(*directoriesFlag, ",")
 	}
 
-	// Komut satırı argümanlarından URL'yi al
+	// Get URL from command line arguments
 	if len(flag.Args()) > 0 {
 		baseURL = flag.Arg(0)
 	}
 
 	if baseURL == "" {
-		fmt.Println("Lütfen -url bayragi ile bir URL belirtin")
+		fmt.Println("Specify a URL with -url flag")
 		os.Exit(1)
 	}
 
