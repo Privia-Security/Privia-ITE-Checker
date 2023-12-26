@@ -29,8 +29,8 @@ Example:
 
 ### References
 ```
--https://www.acunetix.com/vulnerabilities/web/microsoft-iis-tilde-directory-enumeration/
+https://www.acunetix.com/vulnerabilities/web/microsoft-iis-tilde-directory-enumeration/
 ```
 ```
--https://securitytrails.com/blog/microsoft-iis-shortname-tilde-vulnerability
+https://securitytrails.com/blog/microsoft-iis-shortname-tilde-vulnerability
 ```
