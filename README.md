@@ -13,7 +13,7 @@ go install github.com/Privia-Security/finduk@latest
 
 ### >_ How To Run
 ```
-./finduk http://192.168.112.136/ txt,png
+./finduk http://<IP-Address>/ txt,png
 ```
 
 ### >_ Help
