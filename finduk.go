@@ -7,15 +7,32 @@ import (
 	"strings"
 )
 
-var cmd = "go run klasor.go -u %s"
-var cmd2 = "go run klasor.go -u URL | grep DIRECTORY -A10 | grep -v \"STATUS CODE\" | grep -v -i url | awk '{print $3}' | tr '\\n' ' '"
-var cmd3 = "go run uzanti.go -url %s -dir %s -ext %s"
+var cmd = "go run folder.go -u %s"
+var cmd2 = "go run folder.go -u URL | grep DIRECTORY -A10 | grep -v \"STATUS CODE\" | grep -v -i url | awk '{print $3}' | tr '\\n' ' '"
+var cmd3 = "go run extension.go -url %s -dir %s -ext %s"
 
-var url = os.Args[1]
-var ex = os.Args[2]
+
 
 func main() {
 	var exts string
+
+	/*if len(os.Args) < 2 {
+		fmt.Println("Usage: <full URL> <extensions>\n");
+		fmt.Println("Example:\n");
+		fmt.Println("finduk http://192.168.112.136/ txt,png\n");
+		return
+	}*/
+
+	var url = os.Args[1]
+
+	if url== "-help"{
+		fmt.Println("Usage: <full URL> <extensions>\n");
+		fmt.Println("Example:");
+		fmt.Println("\tfinduk http://192.168.112.136/ txt,png\n");
+		return
+	}
+
+	var ex = os.Args[2]
 
 	out, err := exec.Command("sh", "-c", fmt.Sprintf(cmd, url)).Output()
 	if err != nil {
