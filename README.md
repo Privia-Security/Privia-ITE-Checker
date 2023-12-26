@@ -18,7 +18,7 @@ go install github.com/Privia-Security/finduk@latest
 
 ### >_ Help
 ```
-Usage: Full URL <extensions>
+Usage: <full URL> <extensions>
 Example:
         finduk http://192.168.112.136/ txt,png
 ```
