@@ -28,5 +28,9 @@ Example:
 - find file extension
 
 ### References
-1
-2
+```
+-https://www.acunetix.com/vulnerabilities/web/microsoft-iis-tilde-directory-enumeration/
+```
+```
+-https://securitytrails.com/blog/microsoft-iis-shortname-tilde-vulnerability
+```
