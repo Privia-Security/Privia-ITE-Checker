@@ -18,9 +18,19 @@ go install github.com/Privia-Security/finduk@latest
 ```
 
 ### >_ How To Run
+for compile:
+```
+go build finduk.go
+```
 ```
 ./finduk http://<IP-Address>/ txt,png
 ```
+no compile run:
+```
+go run finduk.go http://<IP-Address>/ txt,png
+```
+> [!TIP]
+> In order to find extensions with this tool, burpsuite must be opened before running the tool. You can also examine the traffic via burpsuite.
 
 ### >_ Help
 ```
