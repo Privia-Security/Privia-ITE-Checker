@@ -20,6 +20,8 @@ git clone https://github.com/Privia-Security/Privia-ITE-Checker.git
 ### >_ How To Run
 for compile:
 ```
+cd Privia-ITE-Checker
+
 go build finduk.go
 ```
 ```
