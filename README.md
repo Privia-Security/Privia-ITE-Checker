@@ -14,7 +14,7 @@ It is a tool prepared for IIS Tilde Enumeration vulnerability.
 
 ### >_ Installation
 ```
-go install github.com/Privia-Security/finduk@latest
+git clone https://github.com/Privia-Security/Privia-ITE-Checker.git
 ```
 
 ### >_ How To Run
