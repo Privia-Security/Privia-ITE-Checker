@@ -1,4 +1,4 @@
-# Finduk
+# Privia-ITE-Checker
 
 ### >_ Introduction
 It is a tool prepared for IIS Tilde Enumeration vulnerability.
